@@ -99,7 +99,7 @@
 
 /* V27 - real geography map, no invented Taiwan silhouette */
 .location-map-grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:22px;margin-top:28px;align-items:stretch}
-.cf-real-map{height:610px;width:100%;border-radius:16px;overflow:hidden;border:1px solid #434343;background:#202526;z-index:0}
+.cf-real-map{height:auto;width:100%;border-radius:16px;overflow:hidden;border:1px solid #434343;background:#202526;z-index:0}
 .cf-map-side{border:1px solid #444;background:#242424;padding:26px;border-radius:16px;display:flex;flex-direction:column;gap:13px}
 .cf-map-side h3{font-size:clamp(25px,3vw,36px);margin:0;letter-spacing:-.05em}
 .cf-map-side p{margin:0;color:#ccc;line-height:1.85;font-size:14px}
@@ -116,16 +116,60 @@
 .locations-section{background:#171717;color:#f5f5f2}
 .locations-section .section-title{font-size:clamp(42px,7vw,104px);margin:12px 0 24px}
 .locations-subtitle{color:#c9c9c5;font-size:14px;line-height:1.9;max-width:640px}
-@media(max-width:900px){.location-map-grid{grid-template-columns:1fr}.cf-real-map{height:470px}}
-@media(max-width:550px){.cf-real-map{height:440px}.cf-map-side{padding:20px}.cf-map-side .map-phone{font-size:18px}}
-</style><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoEF0k3v1KCPJ5g=" crossorigin=""><script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js"></script></head><body><header class="hero" id="home"><nav class="nav"><a class="brand" href="#home"><img src="assets/logo.png" alt="晟風空調 Logo"> CHENG FONG <span class="brand-zh">晟風空調</span></a><button class="mobile-toggle" onclick="document.querySelector('.navlinks').classList.toggle('open')" aria-label="開啟選單">☰</button><div class="navlinks"><a href="#work">作品 WORK</a><a href="#expertise">專業 EXPERTISE</a><a href="#about">關於 ABOUT</a><a href="#locations" class="locations-nav-link">服務據點</a><a href="#contact" class="navcta">聯繫我們 ↗</a><button type="button" class="survey-nav" onclick="openSurvey()">線上場勘 ↗</button></div></nav><div class="intro"><div><span class="eyebrow">ENGINEERED WITH PURPOSE · SERVICED WITH CARE</span><h1>好的工程，<br>值得被看見<span class="pink">.</span></h1></div><p>技術不只寫在介紹裡。<br>從每一次現場評估、施工細節到售後服務，讓作品成為專業的證明。</p></div><div class="portfolio"><div class="work-grid" id="wall"></div><div class="hero-word"><span class="desktop-word">CHENG FONG</span><span class="mobile-word">CF</span><small>空調工程 · 專業技術 · 服務承諾</small></div></div><div class="hero-bottom"><span><i class="accent"></i>SELECTED WORKS / 作品展示</span><span>SCROLL TO EXPLORE ↓</span><span><strong>18</strong> VISUAL STORIES</span></div></header><main><section class="section" id="work"><div class="section-top"><div><span class="eyebrow" style="color:#777">01 / OUR WORK</span><h2 class="section-title">WORK<br>SPEAKS<span class="pink">.</span></h2></div><p>我們相信，比起口號，清楚的工程紀錄與完成品質更有說服力。以下展示晟風的空調工程與服務案例。</p></div><div class="filters" id="filters"></div><div class="projects" id="projects"></div></section><section class="section manifesto" id="expertise"><div><span class="eyebrow">02 / THE CHENG FONG STANDARD</span><h2>技術有標準。<br>服務<span class="lime">有後盾。</span></h2><p>我們知道，客戶最在意的不是華麗承諾，而是報價是否清楚、工程是否到位，以及完工後還能不能找到服務窗口。</p><p>清楚說明、專業施工、持續聯繫——這就是我們希望讓每位客戶感受到的晟風標準。</p></div><img src="assets/brand.jpg" alt="晟風品牌形象"></section><section class="section" id="about"><span class="eyebrow" style="color:#777">03 / WHY CHENG FONG</span><h2 class="section-title">TRUST IS<br>BUILT<span class="pink">.</span></h2><div class="pillars"><div class="pillar"><span class="eyebrow" style="color:#777">01 / TRANSPARENCY</span><h3>報價清楚</h3><p>以清楚的項目與費用說明，減少資訊落差；追加需求先溝通確認。</p></div><div class="pillar"><span class="eyebrow" style="color:#777">02 / EXECUTION</span><h3>施工專業</h3><p>重視現場評估、施工品質與工作分工，讓每個細節都被認真對待。</p></div><div class="pillar"><span class="eyebrow" style="color:#777">03 / AFTERCARE</span><h3>售後找得到人</h3><p>透過固定聯繫窗口受理諮詢，讓服務不在完工那一刻結束。</p></div></div></section><section class="section locations-section" id="locations">
+@media(max-width:900px){.location-map-grid{grid-template-columns:1fr}.cf-real-map{height:auto}}
+@media(max-width:550px){.cf-real-map{height:auto}.cf-map-side{padding:20px}.cf-map-side .map-phone{font-size:18px}}
+.cf-static-map svg{display:block;width:100%;height:auto;max-height:660px}.cf-static-map{background:#0d1312}.cf-static-map .cf-svg-pin{transition:opacity .2s}.cf-static-map .cf-svg-pin:hover{opacity:.75}@media(max-width:650px){.cf-static-map{overflow-x:auto}.cf-static-map svg{min-width:690px;width:100%;max-height:none}}\n</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js"></script></head><body><header class="hero" id="home"><nav class="nav"><a class="brand" href="#home"><img src="assets/logo.png" alt="晟風空調 Logo"> CHENG FONG <span class="brand-zh">晟風空調</span></a><button class="mobile-toggle" onclick="document.querySelector('.navlinks').classList.toggle('open')" aria-label="開啟選單">☰</button><div class="navlinks"><a href="#work">作品 WORK</a><a href="#expertise">專業 EXPERTISE</a><a href="#about">關於 ABOUT</a><a href="#locations" class="locations-nav-link">服務據點</a><a href="#contact" class="navcta">聯繫我們 ↗</a><button type="button" class="survey-nav" onclick="openSurvey()">線上場勘 ↗</button></div></nav><div class="intro"><div><span class="eyebrow">ENGINEERED WITH PURPOSE · SERVICED WITH CARE</span><h1>好的工程，<br>值得被看見<span class="pink">.</span></h1></div><p>技術不只寫在介紹裡。<br>從每一次現場評估、施工細節到售後服務，讓作品成為專業的證明。</p></div><div class="portfolio"><div class="work-grid" id="wall"></div><div class="hero-word"><span class="desktop-word">CHENG FONG</span><span class="mobile-word">CF</span><small>空調工程 · 專業技術 · 服務承諾</small></div></div><div class="hero-bottom"><span><i class="accent"></i>SELECTED WORKS / 作品展示</span><span>SCROLL TO EXPLORE ↓</span><span><strong>18</strong> VISUAL STORIES</span></div></header><main><section class="section" id="work"><div class="section-top"><div><span class="eyebrow" style="color:#777">01 / OUR WORK</span><h2 class="section-title">WORK<br>SPEAKS<span class="pink">.</span></h2></div><p>我們相信，比起口號，清楚的工程紀錄與完成品質更有說服力。以下展示晟風的空調工程與服務案例。</p></div><div class="filters" id="filters"></div><div class="projects" id="projects"></div></section><section class="section manifesto" id="expertise"><div><span class="eyebrow">02 / THE CHENG FONG STANDARD</span><h2>技術有標準。<br>服務<span class="lime">有後盾。</span></h2><p>我們知道，客戶最在意的不是華麗承諾，而是報價是否清楚、工程是否到位，以及完工後還能不能找到服務窗口。</p><p>清楚說明、專業施工、持續聯繫——這就是我們希望讓每位客戶感受到的晟風標準。</p></div><img src="assets/brand.jpg" alt="晟風品牌形象"></section><section class="section" id="about"><span class="eyebrow" style="color:#777">03 / WHY CHENG FONG</span><h2 class="section-title">TRUST IS<br>BUILT<span class="pink">.</span></h2><div class="pillars"><div class="pillar"><span class="eyebrow" style="color:#777">01 / TRANSPARENCY</span><h3>報價清楚</h3><p>以清楚的項目與費用說明，減少資訊落差；追加需求先溝通確認。</p></div><div class="pillar"><span class="eyebrow" style="color:#777">02 / EXECUTION</span><h3>施工專業</h3><p>重視現場評估、施工品質與工作分工，讓每個細節都被認真對待。</p></div><div class="pillar"><span class="eyebrow" style="color:#777">03 / AFTERCARE</span><h3>售後找得到人</h3><p>透過固定聯繫窗口受理諮詢，讓服務不在完工那一刻結束。</p></div></div></section><section class="section locations-section" id="locations">
  <span class="eyebrow">04 / OUR LOCATIONS</span>
  <h2 class="section-title">SERVICE<br>LOCATIONS<span class="pink">.</span></h2>
- <p class="locations-subtitle">晟風空調全台服務據點。點選地圖上的標點，可查看各據點名稱；總部可直接開啟 Google 地圖導航。</p>
+ <p class="locations-subtitle">晟風空調全台服務據點，以螢光台灣輪廓與標記呈現。</p>
  <div class="location-map-grid">
    <div>
-    <div id="cfLocationsMap" class="cf-real-map" role="region" aria-label="台灣真實地理底圖與晟風十二個服務據點"></div>
-    <p id="cfMapNotice" class="cf-map-description">地圖標點為各分店所在行政區域的代表位置，並非各分店的精確門牌座標；總部請使用右側地址導航。</p>
+    <div id="cfLocationsMap" class="cf-real-map cf-static-map" role="region" aria-label="螢光台灣輪廓與晟風十二個據點"><svg viewBox="0 0 970 660" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="依真實台灣海岸線繪製的螢光綠台灣輪廓，標示晟風十二個據點的行政區位置示意">
+<defs><filter id="cf-neon-glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter><linearGradient id="cf-land" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#223127"/><stop offset="1" stop-color="#0e1815"/></linearGradient></defs>
+<rect width="970" height="660" rx="18" fill="#0d1312"/>
+<g stroke="#a8d9b0" stroke-width=".5" opacity=".12"><path d="M30 0 V660"/><path d="M78 0 V660"/><path d="M126 0 V660"/><path d="M174 0 V660"/><path d="M222 0 V660"/><path d="M270 0 V660"/><path d="M318 0 V660"/><path d="M366 0 V660"/><path d="M414 0 V660"/><path d="M462 0 V660"/><path d="M510 0 V660"/><path d="M558 0 V660"/><path d="M606 0 V660"/><path d="M654 0 V660"/><path d="M702 0 V660"/><path d="M750 0 V660"/><path d="M798 0 V660"/><path d="M846 0 V660"/><path d="M894 0 V660"/><path d="M942 0 V660"/><path d="M0 20 H970"/><path d="M0 68 H970"/><path d="M0 116 H970"/><path d="M0 164 H970"/><path d="M0 212 H970"/><path d="M0 260 H970"/><path d="M0 308 H970"/><path d="M0 356 H970"/><path d="M0 404 H970"/><path d="M0 452 H970"/><path d="M0 500 H970"/><path d="M0 548 H970"/><path d="M0 596 H970"/><path d="M0 644 H970"/></g>
+<text x="36" y="49" fill="#c8fc66" font-size="13" font-weight="800" letter-spacing="3">TAIWAN / SERVICE NETWORK</text>
+<text x="36" y="75" fill="#93a49a" font-size="11">REAL COASTLINE · REGIONAL MARKERS</text>
+<path d="M 479.0,200.8 L 384.4,479.8 L 317.2,622.5 L 234.4,475.6 L 216.5,346.6 L 308.9,175.7 L 434.6,44.0 L 506.2,95.8 L 479.0,200.8 Z" fill="none" stroke="#b9ff35" stroke-width="13" opacity=".34" filter="url(#cf-neon-glow)"/>
+<path d="M 479.0,200.8 L 384.4,479.8 L 317.2,622.5 L 234.4,475.6 L 216.5,346.6 L 308.9,175.7 L 434.6,44.0 L 506.2,95.8 L 479.0,200.8 Z" fill="url(#cf-land)" stroke="#c2ff4c" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M292.0,261.6 l-12,10" stroke="#c7f750" stroke-width="1" opacity=".55"/>
+<g class="cf-svg-pin"><title>總部｜花壇｜行政區位置示意</title><circle cx="280.0" cy="271.6" r="15" fill="#121817" stroke="#fa4395" stroke-width="1.6"/><text x="280.0" y="275.9" text-anchor="middle" fill="#fa4395" font-size="11" font-weight="800">01</text></g>
+<path d="M285.0,256.7 l-17,-9" stroke="#c7f750" stroke-width="1" opacity=".55"/>
+<g class="cf-svg-pin"><title>彰化店｜行政區位置示意</title><circle cx="268.0" cy="247.7" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="268.0" y="252.0" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">02</text></g>
+<g class="cf-svg-pin"><title>北區店｜行政區位置示意</title><circle cx="438.5" cy="86.4" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="438.5" y="90.7" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">03</text></g>
+<g class="cf-svg-pin"><title>桃園自強特許店｜行政區位置示意</title><circle cx="404.1" cy="96.4" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="404.1" y="100.7" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">04</text></g>
+<g class="cf-svg-pin"><title>苗栗特許店｜行政區位置示意</title><circle cx="328.4" cy="171.8" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="328.4" y="176.1" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">05</text></g>
+<path d="M300.0,267.3 l13,-12" stroke="#c7f750" stroke-width="1" opacity=".55"/>
+<g class="cf-svg-pin"><title>芬園店｜行政區位置示意</title><circle cx="313.0" cy="255.3" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="313.0" y="259.6" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">06</text></g>
+<path d="M307.2,273.1 l22,15" stroke="#c7f750" stroke-width="1" opacity=".55"/>
+<g class="cf-svg-pin"><title>草屯店｜行政區位置示意</title><circle cx="329.2" cy="288.1" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="329.2" y="292.4" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">07</text></g>
+<path d="M315.6,236.9 l8,-22" stroke="#c7f750" stroke-width="1" opacity=".55"/>
+<g class="cf-svg-pin"><title>北屯敦富社區店｜行政區位置示意</title><circle cx="323.6" cy="214.9" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="323.6" y="219.2" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">08</text></g>
+<path d="M301.1,238.8 l-22,-23" stroke="#c7f750" stroke-width="1" opacity=".55"/>
+<g class="cf-svg-pin"><title>西屯店｜行政區位置示意</title><circle cx="279.1" cy="215.8" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="279.1" y="220.1" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">09</text></g>
+<path d="M306.1,251.7 l16,21" stroke="#c7f750" stroke-width="1" opacity=".55"/>
+<g class="cf-svg-pin"><title>大里店｜行政區位置示意</title><circle cx="322.1" cy="272.7" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="322.1" y="277.0" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">10</text></g>
+<g class="cf-svg-pin"><title>花蓮吉安店｜行政區位置示意</title><circle cx="446.7" cy="274.8" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="446.7" y="279.1" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">11</text></g>
+<path d="M285.0,256.7 l-33,14" stroke="#c7f750" stroke-width="1" opacity=".55"/>
+<g class="cf-svg-pin"><title>彰化半線店｜行政區位置示意</title><circle cx="252.0" cy="270.7" r="15" fill="#121817" stroke="#bfff39" stroke-width="1.6"/><text x="252.0" y="275.0" text-anchor="middle" fill="#bfff39" font-size="11" font-weight="800">12</text></g>
+<path d="M615 42 V617" stroke="#6b8173" stroke-width="1" opacity=".4"/>
+<text x="646" y="49" fill="#e7efe8" font-size="17" font-weight="800">服務據點</text>
+<text x="646" y="70" fill="#8eaa94" font-size="11">12 LOCATIONS</text>
+<g><circle cx="663" cy="95" r="13" fill="#17211c" stroke="#fa4395" stroke-width="1.3"/><text x="663" y="98.8" text-anchor="middle" fill="#fa4395" font-size="9" font-weight="800">01</text><text x="688" y="99" fill="#f1f3ec" font-size="13" font-weight="700">總部｜花壇</text></g>
+<g><circle cx="663" cy="138" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="141.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">02</text><text x="688" y="142" fill="#f1f3ec" font-size="13" font-weight="700">彰化店</text></g>
+<g><circle cx="663" cy="181" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="184.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">03</text><text x="688" y="185" fill="#f1f3ec" font-size="13" font-weight="700">北區店</text></g>
+<g><circle cx="663" cy="224" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="227.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">04</text><text x="688" y="228" fill="#f1f3ec" font-size="13" font-weight="700">桃園自強特許店</text></g>
+<g><circle cx="663" cy="267" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="270.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">05</text><text x="688" y="271" fill="#f1f3ec" font-size="13" font-weight="700">苗栗特許店</text></g>
+<g><circle cx="663" cy="310" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="313.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">06</text><text x="688" y="314" fill="#f1f3ec" font-size="13" font-weight="700">芬園店</text></g>
+<g><circle cx="663" cy="353" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="356.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">07</text><text x="688" y="357" fill="#f1f3ec" font-size="13" font-weight="700">草屯店</text></g>
+<g><circle cx="663" cy="396" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="399.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">08</text><text x="688" y="400" fill="#f1f3ec" font-size="13" font-weight="700">北屯敦富社區店</text></g>
+<g><circle cx="663" cy="439" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="442.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">09</text><text x="688" y="443" fill="#f1f3ec" font-size="13" font-weight="700">西屯店</text></g>
+<g><circle cx="663" cy="482" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="485.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">10</text><text x="688" y="486" fill="#f1f3ec" font-size="13" font-weight="700">大里店</text></g>
+<g><circle cx="663" cy="525" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="528.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">11</text><text x="688" y="529" fill="#f1f3ec" font-size="13" font-weight="700">花蓮吉安店</text></g>
+<g><circle cx="663" cy="568" r="13" fill="#17211c" stroke="#bfff39" stroke-width="1.3"/><text x="663" y="571.8" text-anchor="middle" fill="#bfff39" font-size="9" font-weight="800">12</text><text x="688" y="572" fill="#f1f3ec" font-size="13" font-weight="700">彰化半線店</text></g>
+<text x="42" y="633" fill="#718d7d" font-size="11">COASTLINE DATA: NATURAL EARTH · APPROXIMATE AREA LOCATIONS</text>
+</svg></div>
+    <p id="cfMapNotice" class="cf-map-description">以真實台灣海岸線繪製的設計示意圖；標點為各分店大致服務區域，不是實際門牌座標。總部導航請使用右側連結。</p>
    </div>
    <div class="cf-map-side">
       <span class="eyebrow">HEADQUARTERS / 總部</span>
@@ -332,44 +376,5 @@ async function surveyUploadPhotos(uid){const files=Array.from(sv('surveyPhoto').
 sv('surveyForm').addEventListener('submit',async e=>{e.preventDefault();const form=e.currentTarget,btn=sv('surveySubmit'),status=sv('surveyStatus');if(!form.reportValidity())return;btn.disabled=true;status.textContent='正在送出場勘資料與照片…';const f=new FormData(form),val=k=>String(f.get(k)||'').trim();try{const user=await cfStart();const photos=await surveyUploadPhotos(user.id);const pipe=surveyPipe();const msg='【官網線上場勘申請】\n姓名：'+val('name').slice(0,50)+'；電話：'+val('phone').slice(0,20)+'\n服務：'+val('service')+'；場所：'+val('space')+'；地區：'+val('city').slice(0,60)+'\n品牌：'+(val('brand')||'未指定')+'；坪數：'+(val('area')||'未填')+'；台數：'+val('units')+'\n管線：'+(pipe?pipe.raw+'m＋預留'+pipe.allowance+'m＝'+pipe.total.toFixed(1)+'m；超出5m '+pipe.extra.toFixed(1)+'m':'未測量')+'\n樓層：'+val('floor')+'；室外機位置：'+val('outdoor')+'；風險：'+val('risk')+'\n無法安全拍攝：'+(sv('surveyUnsafePhoto').checked?'是':'否')+'\n照片：'+(photos.length?photos.join(' , '):'未提供')+'\n初估：'+sv('estimatePrice').textContent+'\n後續：'+val('way')+'；備註：'+val('details').slice(0,400)+'\n待晟風真人確認。';const r=await cfdb.from('cf_messages').insert({conversation_id:cfId,sender_id:user.id,body:msg.slice(0,2000)});if(r.error)throw r.error;sv('surveyContent').innerHTML='<div class="survey-success"><strong>✓ 已收到線上場勘需求</strong><p>晟風專人會依您填寫的樓層、外機位置及照片評估施工風險，再聯絡確認報價與場勘方式；目前尚未完成正式預約。</p><p><a href="https://line.me/R/ti/p/@347rejkn" target="_blank" rel="noopener noreferrer">LINE 補充說明 ↗</a></p><button class="survey-submit" type="button" onclick="closeSurvey()">完成</button></div>'}catch(err){console.warn('場勘送出失敗',err);status.textContent='未送出成功：'+(err.message||'連線問題')+'。請勿重複上傳照片，或改用 LINE 詢問。';btn.disabled=false}});
 surveyLoadPrices();
 </script>
-<script>
-/* V27: actual OpenStreetMap cartography; coordinates are administrative-area centers, NOT store addresses. */
-(function(){
-const branchAreas=[
-{name:'總部｜花壇',lat:24.045,lon:120.587,hq:true,area:'彰化縣花壇鄉'},
-{name:'彰化店',lat:24.073,lon:120.542,area:'彰化市'},
-{name:'北區店',lat:25.132,lon:121.503,area:'台北市北投區（依提供的分店示意圖）'},
-{name:'桃園自強特許店',lat:24.994,lon:121.301,area:'桃園市桃園區'},
-{name:'苗栗特許店',lat:24.561,lon:120.819,area:'苗栗市'},
-{name:'芬園店',lat:24.012,lon:120.638,area:'彰化縣芬園鄉'},
-{name:'草屯店',lat:23.979,lon:120.684,area:'南投縣草屯鎮'},
-{name:'北屯敦富社區店',lat:24.187,lon:120.737,area:'台中市北屯區'},
-{name:'西屯店',lat:24.176,lon:120.645,area:'台中市西屯區'},
-{name:'大里店',lat:24.102,lon:120.677,area:'台中市大里區'},
-{name:'花蓮吉安店',lat:23.969,lon:121.572,area:'花蓮縣吉安鄉'},
-{name:'彰化半線店',lat:23.989,lon:120.541,area:'彰化縣大村鄉（依提供的分店示意圖）'}
-];
-function startMap(){
-const target=document.getElementById('cfLocationsMap'),hint=document.getElementById('cfMapNotice');
-if(!target)return;
-if(!window.L){hint.textContent='地圖載入失敗，請檢查網路連線；總部地址與導航連結仍可使用。';return;}
-const map=L.map(target,{scrollWheelZoom:false,zoomControl:true}).setView([24.1,121],8);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{minZoom:6,maxZoom:18,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
-const bounds=[];
-branchAreas.forEach(b=>{
- const icon=L.divIcon({className:'',html:'<div class="cf-marker-dot'+(b.hq?' headquarters':'')+'"></div>',iconSize:[22,22],iconAnchor:[11,11]});
- const m=L.marker([b.lat,b.lon],{icon,title:b.name,alt:b.name}).addTo(map);
- const content=document.createElement('div');content.className='cf-map-popup';
- const title=document.createElement('strong');title.textContent=b.name;content.appendChild(title);
- const br=document.createElement('br');content.appendChild(br);
- const small=document.createElement('small');small.textContent=b.hq?'總部所在行政區：'+b.area+'（導航請使用右側地址）':'行政區代表點：'+b.area+'（非分店實際門牌）';content.appendChild(small);
- m.bindPopup(content);bounds.push([b.lat,b.lon]);
-});
-map.fitBounds(bounds,{padding:[28,28],maxZoom:9});
-setTimeout(()=>map.invalidateSize(),250);
-}
-if(document.readyState==='complete')startMap();
-else window.addEventListener('load',startMap,{once:true});
-})();
-</script>
+
 </body></html>
