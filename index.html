@@ -145,6 +145,23 @@ html,body{max-width:100%;overflow-x:clip}
  .cf-map-side .map-go{font-size:14px;word-break:break-word}
  .cf-map-description{padding:0 3px}
 }
+
+/* V30: mobile-only typography and vertical spacing; preserve content and portfolio */
+@media (max-width: 650px) {
+  #about.section{padding-top:48px;padding-bottom:46px}
+  #about .section-title{font-size:clamp(40px,10.5vw,54px);line-height:.98;margin-bottom:24px}
+  #about .pillars{margin-top:26px;gap:0;grid-template-columns:1fr}
+  #about .pillar{padding:17px 0 18px}
+  #about .pillar+.pillar{border-top:1px solid #deded8}
+  #about .pillar .eyebrow{font-size:10px;letter-spacing:.13em;line-height:1.35}
+  #about .pillar h3{font-size:21px;line-height:1.35;margin:9px 0 5px}
+  #about .pillar p{font-size:13px;line-height:1.65;margin:0;color:#656565}
+  #locations.section{padding-top:49px;padding-bottom:48px}
+  #locations .section-title{font-size:clamp(31px,8.6vw,44px);line-height:1.03;letter-spacing:-.055em;margin:12px 0 14px;overflow-wrap:normal}
+  #locations .eyebrow{letter-spacing:.14em;font-size:10px}
+  #locations .locations-subtitle{font-size:13px;line-height:1.65;max-width:100%;margin:0}
+  #locations .location-map-grid{margin-top:17px}
+}
 </style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js"></script></head><body><header class="hero" id="home"><nav class="nav"><a class="brand" href="#home"><img src="assets/logo.png" alt="晟風空調 Logo"> CHENG FONG <span class="brand-zh">晟風空調</span></a><button class="mobile-toggle" onclick="document.querySelector('.navlinks').classList.toggle('open')" aria-label="開啟選單">☰</button><div class="navlinks"><a href="#work">作品 WORK</a><a href="#expertise">專業 EXPERTISE</a><a href="#about">關於 ABOUT</a><a href="#locations" class="locations-nav-link">服務據點</a><a href="#contact" class="navcta">聯繫我們 ↗</a><button type="button" class="survey-nav" onclick="openSurvey()">線上場勘 ↗</button></div></nav><div class="intro"><div><span class="eyebrow">ENGINEERED WITH PURPOSE · SERVICED WITH CARE</span><h1>好的工程，<br>值得被看見<span class="pink">.</span></h1></div><p>技術不只寫在介紹裡。<br>從每一次現場評估、施工細節到售後服務，讓作品成為專業的證明。</p></div><div class="portfolio"><div class="work-grid" id="wall"></div><div class="hero-word"><span class="desktop-word">CHENG FONG</span><span class="mobile-word">CF</span><small>空調工程 · 專業技術 · 服務承諾</small></div></div><div class="hero-bottom"><span><i class="accent"></i>SELECTED WORKS / 作品展示</span><span>SCROLL TO EXPLORE ↓</span><span><strong>18</strong> VISUAL STORIES</span></div></header><main><section class="section" id="work"><div class="section-top"><div><span class="eyebrow" style="color:#777">01 / OUR WORK</span><h2 class="section-title">WORK<br>SPEAKS<span class="pink">.</span></h2></div><p>我們相信，比起口號，清楚的工程紀錄與完成品質更有說服力。以下展示晟風的空調工程與服務案例。</p></div><div class="filters" id="filters"></div><div class="projects" id="projects"></div></section><section class="section manifesto" id="expertise"><div><span class="eyebrow">02 / THE CHENG FONG STANDARD</span><h2>技術有標準。<br>服務<span class="lime">有後盾。</span></h2><p>我們知道，客戶最在意的不是華麗承諾，而是報價是否清楚、工程是否到位，以及完工後還能不能找到服務窗口。</p><p>清楚說明、專業施工、持續聯繫——這就是我們希望讓每位客戶感受到的晟風標準。</p></div><img src="assets/brand.jpg" alt="晟風品牌形象"></section><section class="section" id="about"><span class="eyebrow" style="color:#777">03 / WHY CHENG FONG</span><h2 class="section-title">TRUST IS<br>BUILT<span class="pink">.</span></h2><div class="pillars"><div class="pillar"><span class="eyebrow" style="color:#777">01 / TRANSPARENCY</span><h3>報價清楚</h3><p>以清楚的項目與費用說明，減少資訊落差；追加需求先溝通確認。</p></div><div class="pillar"><span class="eyebrow" style="color:#777">02 / EXECUTION</span><h3>施工專業</h3><p>重視現場評估、施工品質與工作分工，讓每個細節都被認真對待。</p></div><div class="pillar"><span class="eyebrow" style="color:#777">03 / AFTERCARE</span><h3>售後找得到人</h3><p>透過固定聯繫窗口受理諮詢，讓服務不在完工那一刻結束。</p></div></div></section><section class="section locations-section" id="locations">
  <span class="eyebrow">04 / OUR LOCATIONS</span>
  <h2 class="section-title">SERVICE<br>LOCATIONS<span class="pink">.</span></h2>
