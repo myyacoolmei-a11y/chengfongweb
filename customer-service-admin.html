@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>晟風｜客服與價格管理後台</title>
+<title>晟風｜統一管理後台 V33</title>
 <style>
 :root{--pink:#e94192;--lime:#b7f53c;--ink:#161616;--muted:#626262}*{box-sizing:border-box}[hidden]{display:none!important}
-body{margin:0;font-family:system-ui,"Noto Sans TC",sans-serif;color:var(--ink);background:#f5f4f1}main{max-width:1180px;margin:auto;padding:24px 18px 90px}h1{font-size:clamp(25px,4vw,36px);margin:10px 0 8px;letter-spacing:-.035em}h2{font-size:23px}.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--pink)}p{line-height:1.7;color:var(--muted)}input,select,textarea,button{font:inherit}input,select,textarea{border:1px solid #ccc;background:#fff;color:#111;border-radius:9px;padding:12px}button{border:0;border-radius:9px;background:#171717;color:#fff;padding:12px 16px;cursor:pointer;font-weight:700}button:disabled{opacity:.5;cursor:wait}.muted{color:var(--muted);font-size:13px}.status{background:#fff;border:1px solid #ddd;border-radius:10px;padding:11px 14px;white-space:pre-wrap;font-size:13px;line-height:1.7;margin:13px 0}.login{max-width:420px;background:#fff;border:1px solid #ddd;border-radius:16px;padding:24px;margin-top:22px;display:grid;gap:12px}.login input{width:100%}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.tabs{display:flex;gap:8px;border-bottom:1px solid #d7d7d1;margin:22px 0;flex-wrap:wrap}.tab{background:transparent;border-radius:10px 10px 0 0;color:#555;padding:16px 21px}.tab.active{background:var(--ink);color:#fff}.tab.pink.active{background:var(--pink)}.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:17px}.pane,.card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:17px}.threads,.messages{overflow:auto;max-height:57vh;min-height:300px}.threads button{display:block;text-align:left;width:100%;margin:8px 0;padding:12px;background:#f3f3f0;color:#222;overflow-wrap:anywhere}.threads button.active{background:#dcfc94}.messages .message{padding:12px;border-radius:11px;background:#f3f3f0;margin:9px 0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65;font-size:14px}.messages .message.staff{background:#e5fab0}.message small{display:block;color:#656565;margin-bottom:8px;font-size:12px}.photo-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.photo-row img{width:125px;height:105px;object-fit:cover;border-radius:9px;border:1px solid #ddd}.photo-row a{font-size:11px;color:#b7196a}.reply{width:100%;min-height:90px;resize:vertical;margin:12px 0}.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:17px 0 24px}.price-card{display:grid;gap:11px}.price-card strong{font-size:16px}.price-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.price-inputs label{display:grid;gap:6px;font-size:12px}.price-inputs input{width:100%;min-width:0}.brand-row{display:flex;align-items:center;justify-content:space-between;gap:9px}.brand-row select{min-width:95px}.check{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#555;line-height:1.5}.check input{margin-top:3px}.save{background:var(--pink);padding:15px 25px}.warning{background:#fff3f7;border:1px solid #f0b6ca;border-radius:12px;padding:14px;font-size:13px;color:#75304e;line-height:1.7}.flex{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.pill{border-radius:100px;font-size:12px;background:#eee;padding:7px 11px;color:#555}.smallbtn{background:#fff;border:1px solid #ccc;color:#222;padding:9px 12px}@media(max-width:950px){.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.layout,.price-grid{grid-template-columns:1fr}.threads{max-height:260px;min-height:110px}.messages{min-height:220px}.tab{flex:1;padding:14px 8px;font-size:14px}.topbar button{padding:9px}.card{padding:14px}}
+body{margin:0;font-family:system-ui,"Noto Sans TC",sans-serif;color:var(--ink);background:#f5f4f1}main{max-width:1180px;margin:auto;padding:24px 18px 90px}h1{font-size:clamp(25px,4vw,36px);margin:10px 0 8px;letter-spacing:-.035em}h2{font-size:23px}.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--pink)}p{line-height:1.7;color:var(--muted)}input,select,textarea,button{font:inherit}input,select,textarea{border:1px solid #ccc;background:#fff;color:#111;border-radius:9px;padding:12px}button{border:0;border-radius:9px;background:#171717;color:#fff;padding:12px 16px;cursor:pointer;font-weight:700}button:disabled{opacity:.5;cursor:wait}.muted{color:var(--muted);font-size:13px}.status{background:#fff;border:1px solid #ddd;border-radius:10px;padding:11px 14px;white-space:pre-wrap;font-size:13px;line-height:1.7;margin:13px 0}.login{max-width:420px;background:#fff;border:1px solid #ddd;border-radius:16px;padding:24px;margin-top:22px;display:grid;gap:12px}.login input{width:100%}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.tabs{display:flex;gap:8px;border-bottom:1px solid #d7d7d1;margin:22px 0;flex-wrap:wrap}.tab{background:transparent;border-radius:10px 10px 0 0;color:#555;padding:16px 21px}.tab.active{background:var(--ink);color:#fff}.tab.pink.active{background:var(--pink)}.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:17px}.pane,.card{background:#fff;border:1px solid #ddd;border-radius:14px;padding:17px}.threads,.messages{overflow:auto;max-height:57vh;min-height:300px}.threads button{display:block;text-align:left;width:100%;margin:8px 0;padding:12px;background:#f3f3f0;color:#222;overflow-wrap:anywhere}.threads button.active{background:#dcfc94}.messages .message{padding:12px;border-radius:11px;background:#f3f3f0;margin:9px 0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65;font-size:14px}.messages .message.staff{background:#e5fab0}.message small{display:block;color:#656565;margin-bottom:8px;font-size:12px}.photo-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}.photo-row img{width:125px;height:105px;object-fit:cover;border-radius:9px;border:1px solid #ddd}.photo-row a{font-size:11px;color:#b7196a}.reply{width:100%;min-height:90px;resize:vertical;margin:12px 0}.admin-create{display:grid;gap:12px;margin:12px 0}.admin-create input{min-width:200px;max-width:330px}.admin-create select{min-width:110px}.price-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:17px 0 24px}.price-card{display:grid;gap:11px}.price-card strong{font-size:16px}.price-inputs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.price-inputs label{display:grid;gap:6px;font-size:12px}.price-inputs input{width:100%;min-width:0}.brand-row{display:flex;align-items:center;justify-content:space-between;gap:9px}.brand-row select{min-width:95px}.check{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#555;line-height:1.5}.check input{margin-top:3px}.save{background:var(--pink);padding:15px 25px}.warning{background:#fff3f7;border:1px solid #f0b6ca;border-radius:12px;padding:14px;font-size:13px;color:#75304e;line-height:1.7}.flex{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.pill{border-radius:100px;font-size:12px;background:#eee;padding:7px 11px;color:#555}.smallbtn{background:#fff;border:1px solid #ccc;color:#222;padding:9px 12px}@media(max-width:950px){.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.layout,.price-grid{grid-template-columns:1fr}.threads{max-height:260px;min-height:110px}.messages{min-height:220px}.tab{flex:1;padding:14px 8px;font-size:14px}.topbar button{padding:9px}.card{padding:14px}}
 </style></head>
 <body><main>
 <header class="topbar"><div><div class="eyebrow">CHENG FONG / MANAGEMENT</div><h1>晟風管理後台<span style="color:#e94192">.</span></h1><p style="margin:0">真人客服與線上估價價格管理，統一在這裡處理。</p></div><button id="logout" class="smallbtn" hidden>登出</button></header>
@@ -12,7 +12,24 @@ body{margin:0;font-family:system-ui,"Noto Sans TC",sans-serif;color:var(--ink);b
 <section id="app" hidden>
 <div class="tabs" role="tablist" aria-label="後台功能"><button type="button" class="tab active" id="tabChat" role="tab" aria-selected="true">✳ 真人客服</button><button type="button" class="tab pink" id="tabPrices" role="tab" aria-selected="false">▦ 價格管理</button></div>
 <section id="chatPage" role="tabpanel"><div class="flex"><h2>客戶對話</h2><span class="pill">每 10 秒自動更新</span><button type="button" class="smallbtn" id="refreshChat">手動重新整理</button></div><div class="layout"><div class="pane"><strong>對話列表</strong><div id="threads" class="threads"></div></div><div class="pane"><h3 id="subject">選擇左邊對話</h3><div id="messages" class="messages" aria-live="polite"></div><textarea id="reply" class="reply" placeholder="輸入客服回覆內容（最多 2,000 字）" maxlength="2000"></textarea><button id="send">送出回覆</button></div></div><p class="muted">場勘需求中的室外機照片會以縮圖呈現，點擊可開啟限時私人連結。若照片尚未出現，可手動重新整理。</p></section>
-<section id="pricesPage" role="tabpanel" hidden><h2>品牌級距價格管理</h2><div class="warning"><strong>測試價格請勿直接公布。</strong> 目前 A／B／C 是晟風內部分類，網站客人不會看到。只有同時「品牌核准公開」及「價位核准公開」的資料，才會出現在前台。公布前請確認價格是否含基本安裝費。</div><h3>01 / 品牌屬於哪個價位級距</h3><p>同級品牌共用四種坪數的價格設定。調整級距後，同級品牌會套用相同價格。</p><div id="brands" class="price-grid"></div><h3>02 / 每個級距的坪數價格區間</h3><p>每一級的 3–5、6–8、9–12、13–15 坪，只需輸入最低與最高預算價。</p><div id="prices" class="price-grid"></div><div class="flex"><button class="save" id="save">儲存品牌與價格設定</button><button type="button" id="reloadPrice" class="smallbtn">重新載入</button></div><p class="muted">公開價格僅是設備參考範圍，配管與特殊施工需依表單及真人評估。此後台不會公開進貨成本。</p></section>
+<section id="pricesPage" role="tabpanel" hidden><h2>品牌級距價格管理</h2><div class="warning"><strong>測試價格請勿直接公布。</strong> 目前 A／B／C 是晟風內部分類，網站客人不會看到。只有同時「品牌核准公開」及「價位核准公開」的資料，才會出現在前台。公布前請確認價格是否含基本安裝費。</div><h3>01 / 品牌與價位級數</h3>
+<div class="card admin-create">
+ <strong>新增冷氣品牌</strong>
+ <div class="flex">
+  <input id="newBrand" type="text" maxlength="40" placeholder="例如：新品牌名稱" aria-label="新品牌名稱">
+  <select id="newBrandTier" aria-label="指定新品牌價格級數"></select>
+  <button type="button" id="addBrand">＋ 新增品牌</button>
+ </div>
+ <p class="muted">新品牌一律先標記「未公開」。可在下方調整級數，並按「儲存品牌與價格設定」。</p>
+</div>
+<div class="card admin-create">
+ <strong>新增價格級數</strong>
+ <div class="flex">
+  <select id="newTier" aria-label="新增價格級數"></select>
+  <button type="button" id="addTier">＋ 新增級數</button>
+ </div>
+ <p class="muted">A、B、C 已建立；可再新增 D、E 等。新級數會自動建立四組坪數價格，初始為 0 元且未公開。</p>
+</div><p>同級品牌共用四種坪數的價格設定。調整級距後，同級品牌會套用相同價格。</p><div id="brands" class="price-grid"></div><h3>02 / 每個級距的坪數價格區間</h3><p>坪數會固定由小到大排列：3–5 → 6–8 → 9–12 → 13–15 坪。級數也由 A、B、C、D…依序排列。</p><div id="prices" class="price-grid"></div><div class="flex"><button class="save" id="save">儲存品牌與價格設定</button><button type="button" id="reloadPrice" class="smallbtn">重新載入</button></div><p class="muted">公開價格僅是設備參考範圍，配管與特殊施工需依表單及真人評估。此後台不會公開進貨成本。</p></section>
 </section></main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.min.js"></script><script>
 const db=window.supabase.createClient('https://lvsrpibovypabehttszj.supabase.co','sb_publishable_tTPLagFPFxxmSJPNQDQ_rQ_049mD7My');
@@ -28,10 +45,86 @@ async function refreshChat(){if($('app').hidden||mode!=='chat')return;const r=aw
 async function loadMessages(){const id=selected;if(!id)return;const r=await db.from('cf_messages').select('id,body,sender_id,created_at').eq('conversation_id',id).order('id',{ascending:true}).limit(300);if(r.error){notice('訊息讀取失敗：'+r.error.message);return}if(selected!==id)return;const rows=r.data||[],finger=rows.map(x=>x.id).join(',');if(finger===lastMessageFingerprint)return;lastMessageFingerprint=finger;const uid=(await db.auth.getUser()).data.user?.id;$('subject').textContent='對話 '+id.slice(0,8);const area=$('messages');area.replaceChildren();for(const item of rows){const d=el('div',undefined,'message'+(item.sender_id===uid?' staff':''));d.append(el('small',new Date(item.created_at).toLocaleString('zh-TW')+' · '+(item.sender_id===uid?'客服':'客人')),el('div',item.body));area.append(d);const paths=[...new Set([...item.body.matchAll(/室外機照片路徑：([0-9a-f-]{36}\/[0-9a-f-]{36}\.(?:jpg|png|webp))/gi)].map(m=>m[1]))];if(paths.length){const photos=el('div',undefined,'photo-row');for(const path of paths){const q=await db.storage.from('cf-survey-photos').createSignedUrl(path,300);if(q.data?.signedUrl){const link=el('a');link.href=q.data.signedUrl;link.target='_blank';link.rel='noopener noreferrer';const img=el('img');img.src=q.data.signedUrl;img.alt='場勘外機位置照片';img.loading='lazy';link.append(img);photos.append(link)}}d.append(photos)}}area.scrollTop=area.scrollHeight}
 $('refreshChat').onclick=()=>{lastMessageFingerprint='';refreshChat()};
 $('send').onclick=async()=>{if(!selected)return notice('請先選擇一筆對話');const t=$('reply').value.trim();if(!t)return;const b=$('send');b.disabled=true;const uid=(await db.auth.getUser()).data.user?.id;const r=await db.from('cf_messages').insert({conversation_id:selected,sender_id:uid,body:t.slice(0,2000)});b.disabled=false;if(r.error){notice('訊息送出失敗：'+r.error.message);return}$('reply').value='';lastMessageFingerprint='';await loadMessages()};
-async function loadPrices(){const [a,b]=await Promise.all([db.from('cf_quote_brand_tiers').select('*').order('brand'),db.from('cf_quote_tier_prices').select('*').order('tier').order('area_band')]);if(a.error||b.error){notice('價格載入失敗：'+(a.error?.message||b.error?.message));return}brandRows=a.data||[];priceRows=b.data||[];const br=$('brands'),pr=$('prices');br.replaceChildren();pr.replaceChildren();brandRows.forEach((x,i)=>{const card=el('div',undefined,'card price-card');const label=el('strong',x.brand);const row=el('div',undefined,'brand-row');row.append(label);const sel=el('select');sel.dataset.type='tier';sel.dataset.idx=i;for(const t of ['A','B','C']){const opt=el('option',t+' 級');opt.value=t;sel.append(opt)}sel.value=x.tier;row.append(sel);card.append(row);const ck=el('label',undefined,'check');const box=el('input');box.type='checkbox';box.dataset.type='brandPublic';box.dataset.idx=i;box.checked=!x.is_demo;ck.append(box,el('span','品牌核准公開（只顯示品牌，不顯示 A／B／C）'));card.append(ck);br.append(card)});priceRows.forEach((x,i)=>{const card=el('div',undefined,'card price-card');card.append(el('strong',x.tier+' 級 · '+x.area_band));const inputs=el('div',undefined,'price-inputs');for(const [key,label] of [['price_min','最低價'],['price_max','最高價']]){const l=el('label',label);const field=el('input');field.type='number';field.min='0';field.step='1';field.value=x[key];field.dataset.type=key;field.dataset.idx=i;l.append(field);inputs.append(l)}card.append(inputs);const ck=el('label',undefined,'check'),box=el('input');box.type='checkbox';box.dataset.type='pricePublic';box.dataset.idx=i;box.checked=x.published&&!x.is_demo;ck.append(box,el('span','核准此坪數價格對外發布'));card.append(ck);pr.append(card)});notice('已載入 '+brandRows.length+' 個品牌及 '+priceRows.length+' 組坪數價格。')}
+const BANDS=['3–5 坪','6–8 坪','9–12 坪','13–15 坪'];
+const gradeOrder=(t)=>t.charCodeAt(0)-65;
+function tiersNow(){return [...new Set([...brandRows.map(x=>x.tier),...priceRows.map(x=>x.tier)])].sort((a,b)=>gradeOrder(a)-gradeOrder(b))}
+function refreshTierMenus(){
+ const tierMenu=$('newBrandTier'),addMenu=$('newTier');
+ tierMenu.replaceChildren();addMenu.replaceChildren();
+ const used=tiersNow();
+ for(const t of used){const option=el('option',t+' 級');option.value=t;tierMenu.append(option)}
+ for(const t of 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'){
+  if(used.includes(t))continue;
+  const option=el('option',t+' 級');option.value=t;addMenu.append(option)
+ }
+ $('addTier').disabled=!addMenu.options.length;
+}
+async function loadPrices(){
+ const [a,b]=await Promise.all([
+  db.from('cf_quote_brand_tiers').select('*').order('brand'),
+  db.from('cf_quote_tier_prices').select('*').order('tier').order('area_band')
+ ]);
+ if(a.error||b.error){notice('價格載入失敗：'+(a.error?.message||b.error?.message));return}
+ brandRows=(a.data||[]).sort((x,y)=>gradeOrder(x.tier)-gradeOrder(y.tier)||x.brand.localeCompare(y.brand,'zh-TW'));
+ priceRows=(b.data||[]).sort((x,y)=>gradeOrder(x.tier)-gradeOrder(y.tier)||BANDS.indexOf(x.area_band)-BANDS.indexOf(y.area_band));
+ refreshTierMenus();
+ const br=$('brands'),pr=$('prices');br.replaceChildren();pr.replaceChildren();
+ brandRows.forEach((x,i)=>{
+  const card=el('div',undefined,'card price-card'),row=el('div',undefined,'brand-row');
+  row.append(el('strong',x.brand));
+  const sel=el('select');sel.dataset.type='tier';sel.dataset.idx=i;
+  for(const t of tiersNow()){const opt=el('option',t+' 級');opt.value=t;sel.append(opt)}
+  sel.value=x.tier;row.append(sel);card.append(row);
+  const ck=el('label',undefined,'check'),box=el('input');
+  box.type='checkbox';box.dataset.type='brandPublic';box.dataset.idx=i;box.checked=!x.is_demo;
+  ck.append(box,el('span','品牌核准公開（客人不會看到級數）'));card.append(ck);br.append(card)
+ });
+ priceRows.forEach((x,i)=>{
+  const card=el('div',undefined,'card price-card');
+  card.append(el('strong',x.tier+' 級 · '+x.area_band));
+  const inputs=el('div',undefined,'price-inputs');
+  for(const [key,label] of [['price_min','最低價'],['price_max','最高價']]){
+   const l=el('label',label),field=el('input');
+   field.type='number';field.min='0';field.step='1';field.value=x[key];
+   field.dataset.type=key;field.dataset.idx=i;l.append(field);inputs.append(l)
+  }
+  card.append(inputs);
+  const ck=el('label',undefined,'check'),box=el('input');
+  box.type='checkbox';box.dataset.type='pricePublic';box.dataset.idx=i;box.checked=x.published&&!x.is_demo;
+  ck.append(box,el('span','核准此坪數價格對外發布'));card.append(ck);pr.append(card)
+ });
+ notice('已載入 '+brandRows.length+' 個品牌、'+tiersNow().length+' 個級數及 '+priceRows.length+' 組坪數價格，已按級數及坪數排序。');
+}
+$('addBrand').onclick=async()=>{
+ const name=$('newBrand').value.trim(),tier=$('newBrandTier').value;
+ if(!name||name.length>40){notice('請填寫 1～40 字的品牌名稱。');return}
+ if(!tier){notice('請先建立價格級數。');return}
+ if(brandRows.some(x=>x.brand.toLocaleLowerCase()===name.toLocaleLowerCase())){notice('這個品牌已存在。');return}
+ if(!confirm('新增品牌會重新載入資料；如果有尚未儲存的價格變更，請先按取消並儲存。確定新增「'+name+'」？'))return;
+ const btn=$('addBrand');btn.disabled=true;
+ try{
+  const r=await db.from('cf_quote_brand_tiers').insert({brand:name,tier,is_demo:true});
+  if(r.error)throw r.error;
+  $('newBrand').value='';await loadPrices();notice('✓ 已新增 '+name+'（'+tier+' 級），目前未公開。');
+ }catch(e){notice('新增品牌失敗：'+e.message)}
+ finally{btn.disabled=false}
+};
+$('addTier').onclick=async()=>{
+ const tier=$('newTier').value;
+ if(!/^[A-Z]$/.test(tier)||tiersNow().includes(tier)){notice('請選擇尚未建立的級數。');return}
+ if(!confirm('將新增 '+tier+' 級及四組 0 元測試價格（不公開）。尚未儲存的變更會重新載入，確定繼續？'))return;
+ const btn=$('addTier');btn.disabled=true;
+ try{
+  const data=BANDS.map(area_band=>({tier,area_band,price_min:0,price_max:0,is_demo:true,published:false}));
+  const r=await db.from('cf_quote_tier_prices').insert(data);
+  if(r.error)throw r.error;
+  await loadPrices();notice('✓ 已新增 '+tier+' 級及四組坪數。請填入正式價格並另行核准公開。');
+ }catch(e){notice('新增價格級數失敗：'+e.message)}
+ finally{btn.disabled=false}
+};
 const getInput=(type,i)=>document.querySelector('[data-type="'+type+'"][data-idx="'+i+'"]');
 $('reloadPrice').onclick=loadPrices;
-$('save').onclick=async()=>{const changesBrands=[],changesPrices=[];for(let i=0;i<brandRows.length;i++){changesBrands.push({brand:brandRows[i].brand,tier:getInput('tier',i).value,is_demo:!getInput('brandPublic',i).checked})}for(let i=0;i<priceRows.length;i++){const low=getInput('price_min',i).value.trim(),high=getInput('price_max',i).value.trim(),lo=Number(low),hi=Number(high);if(!low||!high||!Number.isFinite(lo)||!Number.isFinite(hi)||lo<0||hi<lo){notice('價格輸入錯誤：'+priceRows[i].tier+' '+priceRows[i].area_band+'，請檢查上下限。');return}const pub=getInput('pricePublic',i).checked;changesPrices.push({tier:priceRows[i].tier,area_band:priceRows[i].area_band,price_min:lo,price_max:hi,published:pub,is_demo:!pub})}
+$('save').onclick=async()=>{const changesBrands=[],changesPrices=[];for(let i=0;i<brandRows.length;i++){changesBrands.push({brand:brandRows[i].brand,tier:getInput('tier',i).value,is_demo:!getInput('brandPublic',i).checked})}for(let i=0;i<priceRows.length;i++){const low=getInput('price_min',i).value.trim(),high=getInput('price_max',i).value.trim(),lo=Number(low),hi=Number(high);if(!low||!high||!Number.isFinite(lo)||!Number.isFinite(hi)||lo<0||hi<lo){notice('價格輸入錯誤：'+priceRows[i].tier+' '+priceRows[i].area_band+'，請檢查上下限。');return}const pub=getInput('pricePublic',i).checked;if(pub&&(lo<=0||hi<=0)){notice('不可發布 0 元價格：'+priceRows[i].tier+' '+priceRows[i].area_band);return}changesPrices.push({tier:priceRows[i].tier,area_band:priceRows[i].area_band,price_min:lo,price_max:hi,published:pub,is_demo:!pub})}
  const publishBrands=changesBrands.filter(x=>!x.is_demo);const publishPrices=changesPrices.filter(x=>x.published);if(publishBrands.length&&publishPrices.length&&!confirm('你將公開 '+publishBrands.length+' 個品牌與 '+publishPrices.length+' 組價格級距，客人可以看到預算範圍。確定這些不是測試價格？'))return;
  const b=$('save');b.disabled=true;notice('正在儲存品牌及價格設定…');try{for(const x of changesBrands){const r=await db.from('cf_quote_brand_tiers').update({tier:x.tier,is_demo:x.is_demo,updated_at:new Date().toISOString()}).eq('brand',x.brand);if(r.error)throw r.error}for(const x of changesPrices){const r=await db.from('cf_quote_tier_prices').update({price_min:x.price_min,price_max:x.price_max,published:x.published,is_demo:x.is_demo,updated_at:new Date().toISOString()}).eq('tier',x.tier).eq('area_band',x.area_band);if(r.error)throw r.error}await loadPrices();notice('✓ 已儲存。官網重新整理即可讀取已正式發布的參考區間。')}catch(e){notice('儲存未全部完成：'+e.message+'。請重新載入核對後再試。')}finally{b.disabled=false}};
 setInterval(()=>{if(!$('app').hidden&&mode==='chat'&&!document.hidden)refreshChat()},10000);gate();
